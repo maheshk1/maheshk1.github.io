@@ -25,21 +25,25 @@ self.addEventListener('push', function(event) {
     console.log('[Service Worker] Push Received.');
     console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
   
-    const title = 'Push Codelab';
+    const title = 'Alert!!!';
     const options = {
      body: event.data.text(),
+       body: event.data.text(),
         icon: 'images/icon.png',
         badge: 'images/badge.png',
+        silent: false,
+        tag: 'renotify',
+        renotify: true,
         sound: "images/notify.mp3",
         vibrate: [500,110,500,110,450,110,200,110,170,40,450,110,200,110,170,40,500],
         actions: [
             {
-              action: 'coffee-action',
+              action: 'like',
               title: 'Like',
               icon: '/images/like.png'
             },
             {
-              action: 'doughnut-action',
+              action: 'unlike',
               title: 'Unlike',
               icon: '/images/unlike.jpeg'
             },
