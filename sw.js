@@ -27,10 +27,23 @@ self.addEventListener('push', function(event) {
   
     const title = 'Push Codelab';
     const options = {
-      body: 'Yay it works.',
-      icon: 'images/icon.png',
-      badge: 'images/badge.png',
-      vibrate: [200, 100, 200, 100, 200, 100, 200],
+     body: event.data.text(),
+        icon: 'images/icon.png',
+        badge: 'images/badge.png',
+        sound: "images/notify.mp3",
+        vibrate: [500,110,500,110,450,110,200,110,170,40,450,110,200,110,170,40,500],
+        actions: [
+            {
+              action: 'coffee-action',
+              title: 'Like',
+              icon: '/images/like.png'
+            },
+            {
+              action: 'doughnut-action',
+              title: 'Unlike',
+              icon: '/images/unlike.jpeg'
+            },
+        ]
     };
   
     event.waitUntil(self.registration.showNotification(title, options));
