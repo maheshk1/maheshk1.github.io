@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Push Codelab</title>
+  <title>Web-Push</title>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
@@ -16,11 +16,11 @@
 <body>
 
   <header>
-    <h1>Code</h1>
+    <h1>Web-Push Notifications Code</h1>
   </header>
 
   <main>
-    <p>Welcome to the push messaging codelab. The button below needs to be
+    <p>Welcome to the push messaging. The button below needs to be
     fixed to support subscribing to push.</p>
     <p>
       <button disabled class="js-push-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
@@ -38,21 +38,6 @@
       <pre><code class="js-subscription-json"></code></pre>
     </section>
   </main>
-
-  <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyAj5Ah4yfoxkwlZo3pdy48INlI3Cyxszcg",
-    authDomain: "service-workers-a835c.firebaseapp.com",
-    databaseURL: "https://service-workers-a835c.firebaseio.com",
-    projectId: "service-workers-a835c",
-    storageBucket: "service-workers-a835c.appspot.com",
-    messagingSenderId: "903526471292"
-  };
-  firebase.initializeApp(config);
-</script>
-
 
   <script src="scripts/main.js"></script>
 
