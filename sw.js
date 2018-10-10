@@ -25,12 +25,12 @@ self.addEventListener('push', function(event) {
     console.log('[Service Worker] Push Received.');
     console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
   
-    const title = 'Alert!!!';
+   const title = 'Hi friends..';
     const options = {
-     body: event.data.text(),
-       body: event.data.text(),
+        body: event.data.text(),
         icon: 'images/icon.png',
-        badge: 'images/badge.png',
+        badge: 'images/icon.png',
+        image: 'images/an.jpg',
         silent: false,
         tag: 'renotify',
         renotify: true,
