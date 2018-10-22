@@ -21,7 +21,7 @@
 
 'use strict';
 
-const applicationServerPublicKey = 'BOGGKnj_D1GpdtcgVnj0SKHXc8qkc49iqIQLLoAWEJR3hsxjyIh8cFFJEUHGWPmshijXd1LRITkjXxTyJzeZs_8';
+const applicationServerPublicKey = 'BISiKkaHnuFZMPIjLmE6rYu4lM0T_Nm5D6vrybBdH_-fQAZrclxuZ-Eoh91MP4u5-4jRgB5Ksov4CaXWPZ1M4C4';
 
 const pushButton = document.querySelector('.js-push-btn');
 
@@ -147,15 +147,6 @@ function updateSubscriptionOnServer(subscription) {
   }
 }
 
-self.addEventListener('notificationclick', function(event) {
-  console.log('[Service Worker] Notification click Received.');
-
-  event.notification.close();
-
-  event.waitUntil(
-    clients.openWindow('https://developers.google.com/web/')
-  );
-});
 
 function unsubscribeUser() {
   swRegistration.pushManager.getSubscription()
